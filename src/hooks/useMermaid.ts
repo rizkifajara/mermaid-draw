@@ -14,19 +14,30 @@ const initializeMermaid = (theme: 'light' | 'dark') => {
     theme: theme === 'dark' ? 'dark' : 'default',
     securityLevel: 'loose',
     fontFamily: 'ui-sans-serif, system-ui, sans-serif',
+    maxTextSize: 100000,
+    htmlLabels: true,
     flowchart: {
       curve: 'basis',
-      padding: 10
+      padding: 10,
+      htmlLabels: true,
+      wrappingWidth: 300,
+      nodeSpacing: 50,
+      rankSpacing: 50
     },
     sequence: {
       actorMargin: 50,
       width: 150,
-      height: 65
+      height: 65,
+      wrap: true
     },
     gantt: {
       fontSize: 11,
       sectionFontSize: 11,
       gridLineStartPadding: 35
+    },
+    c4: {
+      wrap: true,
+      wrapPadding: 10
     }
   })
 }
